@@ -14,6 +14,7 @@
 		4F05EDC32AE43581009D79CA /* TDD_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F05EDC22AE43581009D79CA /* TDD_CalculatorTests.swift */; };
 		4F05EDCD2AE43581009D79CA /* TDD_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F05EDCC2AE43581009D79CA /* TDD_CalculatorUITests.swift */; };
 		4F05EDCF2AE43581009D79CA /* TDD_CalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F05EDCE2AE43581009D79CA /* TDD_CalculatorUITestsLaunchTests.swift */; };
+		4F05EDDC2AE43764009D79CA /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F05EDDB2AE43764009D79CA /* Calculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		4F05EDC82AE43581009D79CA /* TDD CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "TDD CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F05EDCC2AE43581009D79CA /* TDD_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDD_CalculatorUITests.swift; sourceTree = "<group>"; };
 		4F05EDCE2AE43581009D79CA /* TDD_CalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDD_CalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4F05EDDB2AE43764009D79CA /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				4F05EDB12AE43580009D79CA /* TDD_CalculatorApp.swift */,
 				4F05EDB32AE43580009D79CA /* ContentView.swift */,
+				4F05EDDB2AE43764009D79CA /* Calculator.swift */,
 				4F05EDB52AE43581009D79CA /* Assets.xcassets */,
 				4F05EDB72AE43581009D79CA /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				4F05EDB42AE43580009D79CA /* ContentView.swift in Sources */,
 				4F05EDB22AE43580009D79CA /* TDD_CalculatorApp.swift in Sources */,
+				4F05EDDC2AE43764009D79CA /* Calculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -5,32 +5,21 @@
 //  Created by Vito Borghi on 21/10/2023.
 //
 
+/* Requirements
+ 
+ 1. The method can take up to two numbers, separated by commas, 
+ and will return their sum as a result. So the inputs can be:“”, “1”, “1,2”.
+ For an empty string, it will return 0.
+ */
+
 import XCTest
 @testable import TDD_Calculator
 
 final class TDD_CalculatorTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testEmptyStringsReturn0() {
+        let sample = Calculator(n1: "", n2: "")
+        XCTAssertEqual(sample.add(), 0)
     }
 
 }
