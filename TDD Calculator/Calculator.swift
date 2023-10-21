@@ -8,14 +8,11 @@
 import Foundation
 
 struct Calculator {
-    var n1: String
-    var n2: String
+    var input: String
     
     func add() -> Int {
-        if n1 == "" {
-            if n2 == "" {
-                return 0
-            }
+        if input == "" {
+            return 0
         }
         return 0
     }
