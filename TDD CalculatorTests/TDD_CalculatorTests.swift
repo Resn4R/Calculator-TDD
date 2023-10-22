@@ -35,5 +35,13 @@ final class TDD_CalculatorTests: XCTestCase {
     func testReturnSumWithUnknownArguments() {
         let sample = Calculator(input: ["","1,2","1"])
         XCTAssertEqual(sample.add(), 4)
+        
+        let sample2 = Calculator(input: ["","1,2","1","5"])
+        XCTAssertEqual(sample2.add(), 9)
+        
+        let sample3 = Calculator(input: ["2,2","1"])
+        XCTAssertEqual(sample3.add(), 5)
     }
+
+    
 }

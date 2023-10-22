@@ -11,6 +11,9 @@ struct Calculator {
     var input: [String]
     
     func add() -> Int {
-        input.split(separator: ",").joined().compactMap{ Int($0) }.reduce(0, +)
+        input.split(separator: ",")
+             .joined()
+             .compactMap{ Int($0) }
+             .reduce(0, +)
     }
 }
