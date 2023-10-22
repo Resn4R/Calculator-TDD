@@ -21,8 +21,9 @@ final class TDD_CalculatorTests: XCTestCase {
         XCTAssertEqual(sample.add(), 0)
     }
     
-    func testReturnSumIfNotEmpty() {
-        
+    func testReturnValueIfSingleValue() {
+        let sample = Calculator(input: "1")
+        XCTAssertEqual(sample.add(), 1)
     }
 
 }
