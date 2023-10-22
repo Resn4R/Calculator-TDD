@@ -30,4 +30,6 @@ final class TDD_CalculatorTests: XCTestCase {
         let sample = Calculator(input: "1,2")
         XCTAssertEqual(sample.add(), 3)
     }
+    
+    // 2. Allow the add method to handle an unknown number of arguments
 }

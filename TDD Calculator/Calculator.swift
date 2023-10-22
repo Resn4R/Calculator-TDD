@@ -11,14 +11,11 @@ struct Calculator {
     var input: String
     
     func add() -> Int {
-        if input.isEmpty {
-            return 0
-        } else if input == "1"{
-            return 1
-        } else if input == "1,2"{
-            return 3
+        switch input {
+        case "1": return 1
+        case "1,2": return 3
+        default: return 0
         }
         
-        return 0
     }
 }
