@@ -8,14 +8,9 @@
 import Foundation
 
 struct Calculator {
-    var input: String
+    var input: [String]
     
     func add() -> Int {
-        switch input {
-        case "1": return 1
-        case "1,2": return 3
-        default: return 0
-        }
-        
+        input.split(separator: ",").joined().compactMap{ Int($0) }.reduce(0, +)
     }
 }

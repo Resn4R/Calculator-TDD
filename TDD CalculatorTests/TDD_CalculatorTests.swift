@@ -12,24 +12,28 @@ import XCTest
 
 final class TDD_CalculatorTests: XCTestCase {
 
-    /* 1. The method can take up to two numbers, separated by commas,
-           and will return their sum as a result. So the inputs can be:“”, “1”, “1,2”.
-           For an empty string, it will return 0.
-           */
+/* 1. The method can take up to two numbers, separated by commas,
+      and will return their sum as a result. So the inputs can be:“”, “1”, “1,2”.
+      For an empty string, it will return 0.
+*/
     func testEmptyStringsReturn0() {
-        let sample = Calculator(input: "")
+        let sample = Calculator(input: [""])
         XCTAssertEqual(sample.add(), 0)
     }
     
     func testReturnValueIfSingleValue() {
-        let sample = Calculator(input: "1")
+        let sample = Calculator(input: ["1"])
         XCTAssertEqual(sample.add(), 1)
     }
     
     func testReturnSumIfMultiValue() {
-        let sample = Calculator(input: "1,2")
+        let sample = Calculator(input: ["1,2"])
         XCTAssertEqual(sample.add(), 3)
     }
     
-    // 2. Allow the add method to handle an unknown number of arguments
+// 2. Allow the add method to handle an unknown number of arguments
+    func testReturnSumWithUnknownArguments() {
+        let sample = Calculator(input: ["","1,2","1"])
+        XCTAssertEqual(sample.add(), 4)
+    }
 }
