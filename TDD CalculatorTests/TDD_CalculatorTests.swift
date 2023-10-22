@@ -25,5 +25,9 @@ final class TDD_CalculatorTests: XCTestCase {
         let sample = Calculator(input: "1")
         XCTAssertEqual(sample.add(), 1)
     }
-
+    
+    func testReturnSumIfMultiValue() {
+        let sample = Calculator(input: "1,2")
+        XCTAssertEqual(sample.add(), 3)
+    }
 }
