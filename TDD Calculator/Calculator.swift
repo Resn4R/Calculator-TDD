@@ -8,12 +8,14 @@
 import Foundation
 
 struct Calculator {
-    var input: [String]
+    var input: String
     
     func add() -> Int {
         input.split(separator: ",")
-             .joined()
-             .compactMap{ Int($0) }
-             .reduce(0, +)
+            .compactMap({ Int($0) })
+            .reduce(0, +)
     }
 }
+
+//the issue is some values of the array are multi digits (e.g. "1,2")
+//recursion? where?

@@ -17,30 +17,30 @@ final class TDD_CalculatorTests: XCTestCase {
       For an empty string, it will return 0.
 */
     func testEmptyStringsReturn0() {
-        let sample = Calculator(input: [""])
+        let sample = Calculator(input: "")
         XCTAssertEqual(sample.add(), 0)
     }
     
     func testReturnValueIfSingleValue() {
-        let sample = Calculator(input: ["1"])
+        let sample = Calculator(input: "1")
         XCTAssertEqual(sample.add(), 1)
     }
     
     func testReturnSumIfMultiValue() {
-        let sample = Calculator(input: ["1,2"])
+        let sample = Calculator(input: "1,2")
         XCTAssertEqual(sample.add(), 3)
     }
     
 // 2. Allow the add method to handle an unknown number of arguments
     func testReturnSumWithUnknownArguments() {
-        let sample = Calculator(input: ["","1,2","1"])
-        XCTAssertEqual(sample.add(), 4)
+        let sample = Calculator(input: "1,2,3")
+        XCTAssertEqual(sample.add(), 6)
         
-        let sample2 = Calculator(input: ["","1,2","1","5"])
-        XCTAssertEqual(sample2.add(), 9)
+        let sample2 = Calculator(input: "0,2,4,6,8")
+        XCTAssertEqual(sample2.add(), 20)
         
-        let sample3 = Calculator(input: ["2,2","1"])
-        XCTAssertEqual(sample3.add(), 5)
+        let sample3 = Calculator(input: "4,4,4,7,8")
+        XCTAssertEqual(sample3.add(), 27)
     }
 
     
