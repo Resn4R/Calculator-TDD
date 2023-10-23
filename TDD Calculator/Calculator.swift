@@ -17,7 +17,7 @@ struct Calculator {
         }
         
         var result = 0
-        var separator = ""
+        var separator = input.contains("\n") ? "\n" : ","
         var newInput = input
 
         if input.starts(with: "//") {
@@ -25,8 +25,6 @@ struct Calculator {
                 separator = String(customDelimiter)
                 newInput = String(input.split(separator: "\n").last!)
             }
-        } else {
-            separator = input.contains("\n") ? "\n" : ","
         }
 
         result = newInput.split(separator: separator)
