@@ -12,16 +12,12 @@ struct Calculator {
     
     func add() -> Int {
         var result = 0
+        let separator = input.contains("\n") ? "\n" : ","
+
         
-        if input.contains("\n"){
-            result = input.split(separator: "\n")
-                 .compactMap({ Int($0) })
-                 .reduce(0, +)
-        } else {
-           result = input.split(separator: ",")
-                .compactMap({ Int($0) })
-                .reduce(0, +)
-        }
+        result = input.split(separator: separator)
+             .compactMap({ Int($0) })
+             .reduce(0, +)
         
         return result
     }
