@@ -11,11 +11,19 @@ struct Calculator {
     var input: String
     
     func add() -> Int {
-        input.split(separator: ",")
-            .compactMap({ Int($0) })
-            .reduce(0, +)
+        var result = 0
+        
+        if input.contains("\n"){
+            result = input.split(separator: "\n")
+                 .compactMap({ Int($0) })
+                 .reduce(0, +)
+        } else {
+           result = input.split(separator: ",")
+                .compactMap({ Int($0) })
+                .reduce(0, +)
+        }
+        
+        return result
     }
+    
 }
-
-//the issue is some values of the array are multi digits (e.g. "1,2")
-//recursion? where?

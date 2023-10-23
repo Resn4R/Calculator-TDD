@@ -43,5 +43,9 @@ final class TDD_CalculatorTests: XCTestCase {
         XCTAssertEqual(sample3.add(), 27)
     }
 
-    
+// 3. Allow the add method to handle newlines as separators, instead of commas
+    func testReturnSumWithNewLineSeparator() {
+        let sample = Calculator(input: "1\n2")
+        XCTAssertEqual(sample.add(), 3)
+    }
 }
