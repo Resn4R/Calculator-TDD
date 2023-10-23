@@ -53,4 +53,12 @@ final class TDD_CalculatorTests: XCTestCase {
         let sample = Calculator(input: "1,2,")
         XCTAssertEqual(sample.add(), -1)
     }
+
+//5. Allow the add method to handle different delimiters
+// To change the delimiter, the beginning of the input will contain a separate line that looks like this: //[delimiter]\n[numbers]
+
+    func testReturnSumWithCustomDelimiter() {
+        let sample = Calculator(input: "//SENPAI\n3SENPAI3")
+        XCTAssertEqual(sample.add(), 6)
+    }
 }

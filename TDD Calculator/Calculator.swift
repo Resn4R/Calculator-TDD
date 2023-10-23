@@ -11,15 +11,25 @@ struct Calculator {
     var input: String
     
     func add() -> Int {
-        var result = 0
-        let separator = input.contains("\n") ? "\n" : ","
-        
         guard input.last != "," else {
             print("NO COMMAS ALLOWED AT THE END OF THE STRING")
             return -1
         }
+        
+        var result = 0
+        var separator = ""
+        var newInput = input
 
-        result = input.split(separator: separator)
+        if input.starts(with: "//") {
+            if let customDelimiter = input.split(separator: "\n").first?.dropFirst(2) {
+                separator = String(customDelimiter)
+                newInput = String(input.split(separator: "\n").last!)
+            }
+        } else {
+            separator = input.contains("\n") ? "\n" : ","
+        }
+
+        result = newInput.split(separator: separator)
              .compactMap({ Int($0) })
              .reduce(0, +)
         
