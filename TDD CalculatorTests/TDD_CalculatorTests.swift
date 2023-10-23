@@ -4,8 +4,6 @@
 //
 //  Created by Vito Borghi on 21/10/2023.
 //
- 
-
 
 import XCTest
 @testable import TDD_Calculator
@@ -47,5 +45,12 @@ final class TDD_CalculatorTests: XCTestCase {
     func testReturnSumWithNewLineSeparator() {
         let sample = Calculator(input: "1\n2")
         XCTAssertEqual(sample.add(), 3)
+    }
+
+//4. Add validation to not to allow a separator at the end
+//  For example “1,2,” should return an error (or throw an exception)
+    func testThrowsIfCommaAtTheEnd()  {
+        let sample = Calculator(input: "1,2,")
+        XCTAssertEqual(sample.add(), -1)
     }
 }
